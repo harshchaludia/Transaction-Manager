@@ -61,29 +61,29 @@ incrementing 1 for write and decrementing 1 for read.
 
 ## Makefile Configurations (Replace '//' with #, if you have trouble running it)
 
-//Makefile for TX Manager project.  Needs GNU make.
-//Define DEBUGFLAGS for debugging output
-//Warning: make depend overwrites this file.
+#Makefile for TX Manager project.  Needs GNU make.
+#Define DEBUGFLAGS for debugging output
+#Warning: make depend overwrites this file.
 
 .PHONY: depend clean backup setup
 
 MAIN=zgt_test
 
-// Change the following line depending on where you have copied and unzipped the files
-//solutions dir should have src, includes, and test-files directories
-//change with your path if you are not using omega.uta.edu
+#Change the following line depending on where you have copied and unzipped the files
+#solutions dir should have src, includes, and test-files directories
+#change with your path if you are not using omega.uta.edu
 
 TXMGR=..
 
-//set DIRPATH to the dir from where you use the g++ compiler, change with your path if you are not using omega.uta.edu omega.uta.edu
+#set DIRPATH to the dir from where you use the g++ compiler, change with your path if you are not using omega.uta.edu omega.uta.edu
 DIRPATH=/usr
 
 CC=$(DIRPATH)/bin/g++
 
-// EXAMPLE: In the next line only TX_DEBUG is enabled
+#EXAMPLE: In the next line only TX_DEBUG is enabled
 #DEBUGFLAGS =  -DTX_DEBUG # -DTM_DEBUG -DHT_DEBUG
 
-//Below, all are enabled; you can disable it as you wish
+#Below, all are enabled; you can disable it as you wish
 DEBUGFLAGS = -DTX_DEBUG -DTM_DEBUG -DHT_DEBUG
 
 INCLUDES = -I${TXMGR}/include -I.
@@ -106,12 +106,12 @@ depend: $(SRCS) Makefile
 clean:
 	rm -f *.o *~ $(MAIN)
 
-//[comment] Grab the sources for a user who has only the makefile
+#Grab the sources for a user who has only the makefile
 setup:
 	/bin/cp -f $(TXMGR)/src/*.[C] .
 	/bin/cp -f $(TXMGR)/test-files/*.txt .
 	/bin/cp -f $(TXMGR)/includes/*.[h]
 
-//[comment] DO NOT DELETE THIS LINE -- make depend needs it
+#DO NOT DELETE THIS LINE -- make depend needs it
 
 
