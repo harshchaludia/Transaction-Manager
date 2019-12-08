@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T1      	 readTx		1:-1:277		ReadLock	Granted		 P
+T1      	 readTx		2:-1:277		ReadLock	Granted		 P
+T1      	 writeTx		3:1:277			WriteLock	Granted		 P
+T1      	 writeTx		4:1:277			WriteLock	Granted		 P
+T1      	 readTx		1:-2:277		ReadLock	Granted		 P
+T1      	 writeTx		2:0:277			WriteLock	Granted		 P
+T1      	 writeTx		4:2:277			WriteLock	Granted		 P
+T1      	 writeTx		4:3:277			WriteLock	Granted		 P
+T2	W 	BeginTx
+T2      	 readTx		5:-1:235		ReadLock	Granted		 P
+T2      	 writeTx		5:0:235			WriteLock	Granted		 P
+T2      	 writeTx		6:1:235			WriteLock	Granted		 P
+T2      	 readTx		6:0:235		ReadLock	Granted		 P
+T2	      	CommitTx								
+
+T1	      	CommitTx								
+
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T1      	 readTx		1:-1:277		ReadLock	Granted		 P
+T1      	 readTx		2:-1:277		ReadLock	Granted		 P
+T1      	 writeTx		3:1:277			WriteLock	Granted		 P
+T1      	 writeTx		4:1:277			WriteLock	Granted		 P
+T1      	 readTx		1:-2:277		ReadLock	Granted		 P
+T1      	 writeTx		2:0:277			WriteLock	Granted		 P
+T1      	 writeTx		4:2:277			WriteLock	Granted		 P
+T1      	 writeTx		4:3:277			WriteLock	Granted		 P
+T1	      	CommitTx								
+T2	W 	BeginTx
+T2      	 readTx		5:-1:235		ReadLock	Granted		 P
+T2      	 writeTx		5:0:235			WriteLock	Granted		 P
+
+T2      	 writeTx		6:1:235			WriteLock	Granted		 P
+T2      	 readTx		6:0:235		ReadLock	Granted		 P
+T2	      	CommitTx								
+
+---------------------------------------------------------------
+TxId	Txtype	Operation	ObId:Obvalue:optime	LockType	Status		TxStatus
+T1	W 	BeginTx
+T1      	 readTx		1:-1:277		ReadLock	Granted		 P
+T1      	 readTx		2:-1:277		ReadLock	Granted		 P
+T1      	 writeTx		3:1:277			WriteLock	Granted		 P
+T1      	 writeTx		4:1:277			WriteLock	Granted		 P
+T1      	 readTx		1:-2:277		ReadLock	Granted		 P
+T1      	 writeTx		2:0:277			WriteLock	Granted		 P
+T1      	 writeTx		4:2:277			WriteLock	Granted		 P
+T2	W 	BeginTx
+T1      	 writeTx		4:3:277			WriteLock	Granted		 P
+T1	      	CommitTx								
+T2      	 readTx		5:-1:235		ReadLock	Granted		 P
+T2      	 writeTx		5:0:235			WriteLock	Granted		 P
+
+T2      	 writeTx		6:1:235			WriteLock	Granted		 P
+T2      	 readTx		6:0:235		ReadLock	Granted		 P
+T2	      	CommitTx								
+
